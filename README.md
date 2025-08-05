@@ -1,4 +1,4 @@
-# 🎨 Polygon Coloring with Conditional UNet - AI Project
+# 🎨 Ayna ML Assignment – Polygon Coloring with Conditional UNet
 
 <div align="center">
 
@@ -519,22 +519,3 @@ To access the wandb project, run training and check the generated wandb link.
 3. **Multi-Scale Training:** Train on multiple resolutions
 4. **Color Space Exploration:** Experiment with HSV/LAB color spaces
 5. **Advanced Conditioning:** Explore cross-attention for color conditioning
-
-## 📝 Citation
-
-```bibtex
-@misc{polygon_coloring_unet,
-  title={Conditional UNet for Polygon Coloring},
-  author={Ayna ML Assignment},
-  year={2024},
-  note={Implementation for ML internship assignment}
-}
-```
-
-## 📞 Support
-
-For questions or issues, please contact the development team or create an issue in the project repository.
-
----
-
-**Note:** This implementation demonstrates proficiency in deep learning concepts, PyTorch development, experiment tracking, and model deployment for computer vision tasks.
