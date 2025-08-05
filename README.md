@@ -1,14 +1,78 @@
-# 🎨 Polygon Coloring with Conditional UNet - Technical Report
+# 🎨 Polygon Coloring with Conditional UNet - AI Project
+
+<div align="center">
+
+![Web Interface](Screenshot_20250805_222738.png)
+*Interactive Web Interface - Choose any polygon shape and color*
+
+</div>
 
 ## 📋 Executive Summary
 
-Successfully implemented and trained a conditional UNet model for polygon coloring across **8 shapes** and **8 colors**. Final model achieves **13.87 dB PSNR** and **0.733 SSIM** with complete web interface deployment.
+Successfully implemented and trained a **conditional UNet model** for polygon coloring across **8 shapes** and **8 colors**. Final model achieves **13.87 dB PSNR** and **0.733 SSIM** with complete web interface deployment.
 
-**Key Results:**
+**🎯 Key Results:**
 - ✅ All 8 polygon shapes supported (circle, diamond, hexagon, octagon, pentagon, square, star, triangle)
 - ✅ All 8 colors accurately generated (blue, cyan, green, magenta, orange, purple, red, yellow)
 - ✅ Interactive web interface with real-time inference
 - ✅ Comprehensive experiment tracking via Weights & Biases
+- ✅ Production-ready deployment with Docker support
+
+## 🎨 Live Demo Results
+
+### Single Prediction Example
+![Single Prediction](demo_single_prediction.png)
+*AI-generated colored polygon from grayscale input*
+
+### Color Variations Showcase
+![Color Variations](demo_color_variations.png)
+*All 8 colors applied to a single polygon shape*
+
+### Multiple Shapes Comparison
+![Comparison Grid](demo_comparison_grid.png)
+*Different shapes with various colors generated simultaneously*
+
+## 🌐 Interactive Web Interface
+
+### Shape Selection
+![Shape Selection](Screenshot_20250805_222521.png)
+*Choose from 8 different polygon shapes*
+
+### Color Selection & Results
+![Color Selection](Screenshot_20250805_222641.png)
+*Pick colors and see instant AI-generated results*
+
+### Interactive Command Line Interface
+![Triangle Variations](color_variations_triangle.png)
+*Generated using: `python inference.py --interactive` - All 8 colors for Triangle*
+
+## 🚀 Usage Examples
+
+### 1. Interactive Mode (Recommended)
+```bash
+python inference.py --interactive
+```
+**Features:**
+- Choose from 8 polygon shapes
+- Select from 8 vibrant colors  
+- Generate color variations for any shape
+- User-friendly command-line interface
+
+### 2. Web Interface
+```bash
+streamlit run web_app.py
+# Access: http://localhost:8501
+```
+**Features:**
+- Point-and-click interface
+- Real-time preview
+- Side-by-side comparison
+- Download generated images
+
+### 3. Direct Inference
+```bash
+python inference.py --image_path dataset/validation/inputs/circle.png --color blue
+```
 
 ---
 
@@ -150,13 +214,13 @@ streamlit run web_app.py
 
 ### Inference Script
 ```bash
-python inference.py --interactive
+python inference.py --model_path results/best_model.pth --demo
 ```
 **Outputs**: Single predictions, color variations, comparison grids
 
 ### Training
 ```bash
-python train.py --dataset_root dataset --batch_size 2 --epochs 1500
+python train.py --dataset_root dataset --batch_size 2 --epochs 50
 ```
 
 ---
@@ -167,8 +231,7 @@ python train.py --dataset_root dataset --batch_size 2 --epochs 1500
 - Project: polygon-coloring-unet
 - Metrics: Loss curves, PSNR/SSIM, learning rates
 - Visualizations: Sample predictions, training progress
-- **Final Run**: https://wandb.ai/hiro92012-academy-of-technology/polygon-coloring-unet (private)
-- **public share**: https://wandb.ai/hiro92012-academy-of-technology/polygon-coloring-ai-v2/workspace?nw=nwuserhiro92012
+- **Final Run**: https://wandb.ai/hiro92012-academy-of-technology/polygon-coloring-unet
 
 ---
 
@@ -456,6 +519,21 @@ To access the wandb project, run training and check the generated wandb link.
 3. **Multi-Scale Training:** Train on multiple resolutions
 4. **Color Space Exploration:** Experiment with HSV/LAB color spaces
 5. **Advanced Conditioning:** Explore cross-attention for color conditioning
+
+## 📝 Citation
+
+```bibtex
+@misc{polygon_coloring_unet,
+  title={Conditional UNet for Polygon Coloring},
+  author={Ayna ML Assignment},
+  year={2024},
+  note={Implementation for ML internship assignment}
+}
+```
+
+## 📞 Support
+
+For questions or issues, please contact the development team or create an issue in the project repository.
 
 ---
 
