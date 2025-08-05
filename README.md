@@ -150,13 +150,13 @@ streamlit run web_app.py
 
 ### Inference Script
 ```bash
-python inference.py --model_path results/best_model.pth --demo
+python inference.py --interactive
 ```
 **Outputs**: Single predictions, color variations, comparison grids
 
 ### Training
 ```bash
-python train.py --dataset_root dataset --batch_size 2 --epochs 50
+python train.py --dataset_root dataset --batch_size 2 --epochs 1500
 ```
 
 ---
@@ -167,7 +167,8 @@ python train.py --dataset_root dataset --batch_size 2 --epochs 50
 - Project: polygon-coloring-unet
 - Metrics: Loss curves, PSNR/SSIM, learning rates
 - Visualizations: Sample predictions, training progress
-- **Final Run**: https://wandb.ai/hiro92012-academy-of-technology/polygon-coloring-unet
+- **Final Run**: https://wandb.ai/hiro92012-academy-of-technology/polygon-coloring-unet (private)
+- **public share**: https://wandb.ai/hiro92012-academy-of-technology/polygon-coloring-ai-v2/workspace?nw=nwuserhiro92012
 
 ---
 
@@ -455,21 +456,6 @@ To access the wandb project, run training and check the generated wandb link.
 3. **Multi-Scale Training:** Train on multiple resolutions
 4. **Color Space Exploration:** Experiment with HSV/LAB color spaces
 5. **Advanced Conditioning:** Explore cross-attention for color conditioning
-
-## 📝 Citation
-
-```bibtex
-@misc{polygon_coloring_unet,
-  title={Conditional UNet for Polygon Coloring},
-  author={Ayna ML Assignment},
-  year={2024},
-  note={Implementation for ML internship assignment}
-}
-```
-
-## 📞 Support
-
-For questions or issues, please contact the development team or create an issue in the project repository.
 
 ---
 
